@@ -1,0 +1,27 @@
+<div>
+ <h3>Three.js - Uso</h3>
+ <pre class="meiuca">
+  &lt;script src="js/Three.js"&gt;&lt;/script&gt;
+
+  &lt;script&gt;
+    var camera, scene, renderer;
+
+    init();
+    animate();
+
+    function init() {
+        ...
+    }
+
+    function animate() {
+        requestAnimationFrame( animate );
+        render();
+    }
+
+    function render() {
+        ...
+        renderer.render( scene, camera );
+    }
+  &lt;/script&gt;
+ </pre>
+</div>

@@ -1,0 +1,46 @@
+<div id="cubo">
+ <h3>Alo, cubo!</h3>
+ <script>
+    var ccamera, cscene, crenderer,
+        cgeometry, cmaterial, cmesh;
+
+    initCube();
+    animateCube();
+
+    function initCube() {
+
+        cscene = new THREE.Scene();
+
+        ccamera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+        ccamera.position.z = 1000;
+        cscene.add( ccamera );
+
+        cgeometry = new THREE.CubeGeometry( 200, 200, 200 );
+        cmaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
+
+        cmesh = new THREE.Mesh( cgeometry, cmaterial );
+        cscene.add( cmesh );
+
+        crenderer = new THREE.CanvasRenderer();
+        crenderer.setSize( window.innerWidth, window.innerHeight );
+
+        document.getElementById('cubo').appendChild( crenderer.domElement );
+
+    }
+
+    function animateCube() {
+        requestAnimationFrame( animateCube );
+        renderCube();
+    }
+
+    function renderCube() {
+
+        cmesh.rotation.x += 0.01;
+        cmesh.rotation.y += 0.02;
+
+        crenderer.render( cscene, ccamera );
+
+    }
+
+ </script>
+</div>

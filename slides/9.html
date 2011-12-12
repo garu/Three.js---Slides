@@ -1,0 +1,26 @@
+<div>
+ <h3>Alo, cubo!</h3>
+ <pre>
+  &lt;script&gt;
+   var camera, scene, renderer,
+       geometry, material, mesh;
+
+   init();
+   animate();
+
+   function init() {
+       // cria nossa cena
+       scene = new THREE.Scene();
+
+       // cria e posiciona camera
+       camera = new THREE.PerspectiveCamera(
+           75,    // campo de visão (fov)
+           window.innerWidth / window.innerHeight, // aspect
+           1,     // near
+           10000  // far
+       );
+       camera.position.z = 1000;
+       scene.add( camera );
+
+ </pre>
+</div>

@@ -1,0 +1,24 @@
+<div>
+ <h3>Alo, cubo!</h3>
+ <pre>
+    function animate() {
+
+        /* Inclua RequestAnimationFrame.js
+           para compatibilidade cross-browser */
+
+        requestAnimationFrame( animate );
+        render();
+
+    }
+
+    function render() {
+
+        // gira o cubo antes de renderizar
+        mesh.rotation.x += 0.01;
+        mesh.rotation.y += 0.02;
+
+        renderer.render( scene, camera );
+
+    }
+ </pre>
+</div>
