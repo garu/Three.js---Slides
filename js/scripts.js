@@ -49,6 +49,9 @@ var Slides = {
    },
 
    next : function() {
+      // can't go any further
+      if ( Slides.currentSlide == Slides.totalSlides - 1 ) return;
+
       Slides.translateAmount -= Slides.slideWidth;
       Slides.updateHash( ++Slides.currentSlide );
       Slides.animate();
