@@ -1,6 +1,6 @@
 .wrap {
   margin: auto;  
-  width: 800px; /* 1180px;  */
+  width: 1180px;
   overflow: hidden; /* because children will be floated */  
 }
 
@@ -10,7 +10,7 @@
 
 #slides > div {  
     height: 600px;  
-    width: 800px; /* 1180px;  */
+    width: 1180px;
     float: left;  
     margin-right: 200px;  
     text-align: center;  
